@@ -1,17 +1,17 @@
 [package]
-name = "rocket-basicauth"
-description = "A high-level basic access authentication request guard for Rocket.rs"
+name = "rkt-basicauth"
+description = "A high-level basic access authentication request guard for rkt.rs"
 version = "3.0.0"
 readme = "README.md"
 license = "MIT"
-repository = "https://github.com/owez/rocket-basicauth"
-keywords = ["web", "rocket", "auth", "basic-auth", "authentication"]
+repository = "https://github.com/cocoon/rkt-basicauth"
+keywords = ["web", "rkt", "auth", "basic-auth", "authentication"]
 authors = ["Owez <root@ogriffiths.com>"]
-edition = "2018"
+edition = "2021"
 
 [dependencies]
 base64 = "0.13"
-rocket = "0.5.0"
+rkt = "1.2.0"
 log = { version = "0.4", optional = true }
 
 [features]
