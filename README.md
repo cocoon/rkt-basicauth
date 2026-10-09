@@ -1,15 +1,13 @@
-# rocket-basicauth
+# rkt-basicauth
 
-[![Tests](https://github.com/Owez/rocket-basicauth/workflows/Tests/badge.svg)](https://github.com/Owez/rocket-basicauth/actions?query=workflow%3ATests) [![Docs](https://docs.rs/rocket-basicauth/badge.svg)](https://docs.rs/rocket-basicauth/)
+[![Tests](https://github.com/cocoon/rkt-basicauth/workflows/Tests/badge.svg)](https://github.com/cocoon/rkt-basicauth/actions?query=workflow%3ATests) [![Docs](https://docs.rs/rkt-basicauth/badge.svg)](https://docs.rs/rkt-basicauth/)
 
-A high-level [basic access authentication](https://en.wikipedia.org/wiki/Basic_access_authentication) request guard for [Rocket.rs](https://rocket.rs)
+A high-level [basic access authentication](https://en.wikipedia.org/wiki/Basic_access_authentication) request guard for [rkt.rs](https://github.com/rustfoo/rkt)
 
 ## Example
 
 ```rust
-#[macro_use] extern crate rocket;
-
-use rocket_basicauth::BasicAuth;
+use rkt_basicauth::BasicAuth;
 
 /// Hello route with `auth` request guard, containing a `name` and `password`
 #[get("/hello/<age>")]
@@ -19,7 +17,7 @@ fn hello(auth: BasicAuth, age: u8) -> String {
 
 #[launch]
 fn rocket() -> _ {
-    rocket::build().mount("/", routes![hello])
+    rkt::build().mount("/", routes![hello])
 }
 ```
 
@@ -29,7 +27,7 @@ Simply add the following to your `Cargo.toml` file:
 
 ```toml
 [dependencies]
-rocket-basicauth = "3"
+rkt-basicauth = "3"
 ```
 
 #### Disabling logging
@@ -38,25 +36,7 @@ By default, this crate uses the [`log`](https://crates.io/crates/log) library to
 
 ```toml
 [dependencies]
-rocket-basicauth = { version = "2", default-features = false }
-```
-
-#### Rocket 0.5-rc1 to 0.5-rc3
-
-Version 2.0 supports the pre-release versions of Rocket 0.5 RC1 to RC3
-
-```toml
-[dependencies]
-rocket-basicauth = "2"
-```
-
-#### Rocket 0.4
-
-Support for Rocket 0.4 is **decrepit** in the eyes of this crate but may still be used by changing the version, to do this, instead write:
-
-```toml
-[dependencies]
-rocket-basicauth = "1"
+rkt-basicauth = { version = "3", default-features = false }
 ```
 
 ## Security
