@@ -58,9 +58,9 @@
 use base64;
 #[cfg(feature = "log")]
 use log::trace;
-use rocket::http::Status;
-use rocket::outcome::Outcome;
-use rocket::request::{self, FromRequest, Request};
+use rkt::http::Status;
+use rkt::outcome::Outcome;
+use rkt::request::{self, FromRequest, Request};
 
 /// Contains errors relating to the [BasicAuth] request guard
 #[derive(Debug)]
@@ -153,7 +153,7 @@ impl BasicAuth {
     }
 }
 
-#[rocket::async_trait]
+#[rkt::async_trait]
 impl<'r> FromRequest<'r> for BasicAuth {
     type Error = BasicAuthError;
 
