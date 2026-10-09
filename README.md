@@ -1,6 +1,6 @@
 # rkt-basicauth
 
-[![Tests](https://github.com/cocoon/rkt-basicauth/workflows/Tests/badge.svg)](https://github.com/cocoon/rkt-basicauth/actions?query=workflow%3ATests) [![Docs](https://docs.rs/rkt-basicauth/badge.svg)](https://docs.rs/rkt-basicauth/)
+[![Tests](https://github.com/Owez/rocket-basicauth/workflows/Tests/badge.svg)](https://github.com/Owez/rocket-basicauth/actions?query=workflow%3ATests) [![Docs](https://docs.rs/rocket-basicauth/badge.svg)](https://docs.rs/rocket-basicauth/)
 
 A high-level [basic access authentication](https://en.wikipedia.org/wiki/Basic_access_authentication) request guard for [rkt.rs](https://github.com/rustfoo/rkt)
 
